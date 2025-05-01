@@ -4,7 +4,7 @@ import pandas as pd
 caminho_dados = 'D:\\PARTICULAR\\AULAS\\netflix_titles.csv'
 
 try: 
-    #Tentar carregar p dadps dp CSV para um DataFrame
+    #Tentar carregar p dados do CSV para um DataFrame
     
     df = pd.read_csv(caminho_dados)
     
@@ -18,6 +18,13 @@ try:
     print("-" * 30)
 
     print("Dimensões (linhas, colunas):", df.shape)
+    print("-" * 30)
+
+    print(df.describe())
+    print("-" * 30)
+
+    print(df.nunique())
+
 
 except FileNotFoundError:
     print(f"Erro: O arquivo '{caminho_dados}' não foi encontrado.")
